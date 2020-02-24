@@ -85,7 +85,7 @@ if(	   isset($_POST['email'])
 
 	      try {
 	        	$db = new PDO($connection_string, $dbuser, $dbpass);
-	                $stmt = $db->prepare("INSERT INTO `TestUsers`(email, password) VALUES (:email, :password)");
+	                $stmt = $db->prepare "INSERT INTO `TestUsers`(email, password) VALUES (:email, :password)";
 		        $email = $_POST['email'];
                         $password = $_POST['password']
                         $params = array(":email"=> $email, 
