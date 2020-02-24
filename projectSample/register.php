@@ -11,7 +11,7 @@
     let ee = document.getEmailById("email_error");
     if(form.enail.value.trim().lenght >
 			function verifyPasswords(form){
-				if(form.password.value.length == 8 || form.confirm.value.length == 8){
+				if(form.password.value.length == 0 || form.confirm.value.length == 0){
 					//alert("You must enter both a password and confirmation password");
 					pe.innerText = "you must enter both a password  and a confirm password";
           return false;
