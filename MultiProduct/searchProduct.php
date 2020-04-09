@@ -18,10 +18,10 @@ error_reporting(E_ALL);
 
 
 
-if(     isset($_POST['product_name'])
+if(     isset($_POST['productName'])
 
 
-     && isset($_POST[date_of_search'])
+     && isset($_POST[date'])
       
          
      && isset($_POST['email']) 
@@ -108,17 +108,17 @@ if(     isset($_POST['product_name'])
 
        
 
-			$stmt =$db->prepare ("INSERT INTO `UserSearch` (product_name, date_of_search, email, password) VALUES (:product_name, :date_of_search, :email, :password)");    
+			$stmt =$db->prepare ("INSERT INTO `UserSearch` (productName, date, email, password) VALUES (:productName, :date, :email, :password)");
    
-                        $product_name=$_POST['product_name'];
+                        $productName=$_POST['productName'];
                         
-                        $date_of_search=$_POST['date_of_search'];
+                        $date=$_POST['date'];
                            
                         $email=$_POST['email'];
 
                         $password=$_POST['password'];
 
-			$params = array(":product_name"=> $product_name, ":date_of_search"=> $date_of_search, ":email"=> $email, ":password"=> $pass);
+			$params = array(":productName"=> $productName, ":date"=> $date, ":email"=> $email, ":password"=> $pass);
 
 
 
@@ -354,7 +354,7 @@ if(     isset($_POST['product_name'])
 
                 <tr>
 
-                <td><label for= "product">Name of Product:</td><td><input type="product"id="product" name="product"placeholder="Enter Product"/></td>
+                <td><label for= "product">productName:</td><td><input type="product"id="product" name="product"placeholder="Enter productName"/></td>
 
                 </tr>
 
@@ -362,13 +362,13 @@ if(     isset($_POST['product_name'])
    
                 <tr>
 
-                <td><label for= "date">Date:</td><td><input type="date" id="date" name="date" placeholder="Enter date"/></td>
+                <td><label for= "date">date:</td><td><input type="date" id="date" name="date" placeholder="Enter date"/></td>
 
                 </tr>
 
                 <tr>
 
-                <td><label for= "email">Email:</td><td><input type="email"id="email" name="email"placeholder="Enter Email"/></td>
+                <td><label for= "email">email:</td><td><input type="email"id="email" name="email"placeholder="Enter email"/></td>
 
                 </tr>
 
