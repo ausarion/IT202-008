@@ -26,6 +26,8 @@ padding:0px;
 
 canvas, body{
 
+background-color: green;
+
 padding: 0px;
 
 margin:0px;
@@ -40,7 +42,7 @@ margin:0px;
 
 <div id="center">
 
-<canvas id="canvas" width="550px" height="550px"></canvas>
+<canvas id="canvas" style="2px solid border black" width="750px" height="450px"></canvas>
 
 </div>
 
@@ -130,7 +132,7 @@ var swapped = false;
 
 var paddleWidth = 25;
 
-var paddleHeight = 100;
+var paddleHeight = 50;
 
 var leftPaddle = makeRect(25, canvas.height / 2 - paddleHeight / 2, paddleWidth, paddleHeight, 5, '#BC0000');
 
@@ -144,7 +146,7 @@ var deg = 0;
 
 window.setInterval(function(){
 
-	deg+= 20;
+	deg+= 0;
 
 	canvas.style.transform = "rotate(" + deg + "deg)";
 
@@ -166,7 +168,7 @@ var rightScore = 0;
 
 var ballLength = 15;
 
-var ballSpeed = 2;
+var ballSpeed = 3;
 
 //create X pong balls
 
@@ -406,7 +408,7 @@ function endGame() {
 
   var winner = 1;
 
-  if (rightScore === 10) winner = 2;
+  if (rightScore === 20) winner = 2;
 
   context.fillText('Player ' + winner + ' wins!', canvas.width/2, canvas.height/2);
 
@@ -536,7 +538,7 @@ function checkScore(ball){
 
   if (ball.x < leftPaddle.x) {
 
-    rightScore++;
+    rightScore+=2;
 
 	swapped = false;
 
@@ -546,7 +548,7 @@ function checkScore(ball){
 
   } else if (ball.x + ball.w > rightPaddle.x + rightPaddle.w) {
 
-    leftScore++;
+    leftScore+=2;
 
 	swapped = false;
 

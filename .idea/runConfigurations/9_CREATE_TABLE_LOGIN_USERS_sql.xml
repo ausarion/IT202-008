@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="9_CREATE_TABLE_LOGIN_USERS.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+    <script-file value="$PROJECT_DIR$/MultiProduct/sql/9_CREATE_TABLE_LOGIN_USERS.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="eafd654a-062b-479a-8dc7-f06692698b0a" namespace="schema/&quot;rja36&quot;" />
+    <method v="2" />
+  </configuration>
+</component>
