@@ -26,8 +26,11 @@ padding:0px;
 
 canvas, body{
 
+<<<<<<< HEAD
 background-color: green;
 
+=======
+>>>>>>> origin/master
 padding: 0px;
 
 margin:0px;
@@ -42,7 +45,11 @@ margin:0px;
 
 <div id="center">
 
+<<<<<<< HEAD
 <canvas id="canvas" style="2px solid border black" width="750px" height="450px"></canvas>
+=======
+<canvas id="canvas" width="550px" height="550px"></canvas>
+>>>>>>> origin/master
 
 </div>
 
@@ -132,7 +139,11 @@ var swapped = false;
 
 var paddleWidth = 25;
 
+<<<<<<< HEAD
 var paddleHeight = 50;
+=======
+var paddleHeight = 100;
+>>>>>>> origin/master
 
 var leftPaddle = makeRect(25, canvas.height / 2 - paddleHeight / 2, paddleWidth, paddleHeight, 5, '#BC0000');
 
@@ -146,7 +157,11 @@ var deg = 0;
 
 window.setInterval(function(){
 
+<<<<<<< HEAD
 	deg+= 0;
+=======
+	deg+= 20;
+>>>>>>> origin/master
 
 	canvas.style.transform = "rotate(" + deg + "deg)";
 
@@ -168,7 +183,11 @@ var rightScore = 0;
 
 var ballLength = 15;
 
+<<<<<<< HEAD
 var ballSpeed = 3;
+=======
+var ballSpeed = 2;
+>>>>>>> origin/master
 
 //create X pong balls
 
@@ -408,7 +427,11 @@ function endGame() {
 
   var winner = 1;
 
+<<<<<<< HEAD
   if (rightScore === 20) winner = 2;
+=======
+  if (rightScore === 10) winner = 2;
+>>>>>>> origin/master
 
   context.fillText('Player ' + winner + ' wins!', canvas.width/2, canvas.height/2);
 
@@ -538,7 +561,11 @@ function checkScore(ball){
 
   if (ball.x < leftPaddle.x) {
 
+<<<<<<< HEAD
     rightScore+=2;
+=======
+    rightScore++;
+>>>>>>> origin/master
 
 	swapped = false;
 
@@ -548,7 +575,11 @@ function checkScore(ball){
 
   } else if (ball.x + ball.w > rightPaddle.x + rightPaddle.w) {
 
+<<<<<<< HEAD
     leftScore+=2;
+=======
+    leftScore++;
+>>>>>>> origin/master
 
 	swapped = false;
 
